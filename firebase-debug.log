@@ -1,0 +1,31 @@
+[debug] [2021-11-09T13:49:46.665Z] ----------------------------------------------------------------------
+[debug] [2021-11-09T13:49:46.668Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ANTAR\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2021-11-09T13:49:46.669Z] CLI Version:   9.22.0
+[debug] [2021-11-09T13:49:46.669Z] Platform:      win32
+[debug] [2021-11-09T13:49:46.669Z] Node Version:  v14.17.1
+[debug] [2021-11-09T13:49:46.670Z] Time:          Tue Nov 09 2021 19:49:46 GMT+0600 (Bangladesh Standard Time)
+[debug] [2021-11-09T13:49:46.671Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-11-09T13:49:46.790Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-11-09T13:49:46.790Z] > authorizing via signed-in user (bjitdas10@gmail.com)
+[debug] [2021-11-09T13:49:46.791Z] [iam] checking project doctors-portal-a186b for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-11-09T13:49:46.794Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/doctors-portal-a186b:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-11-09T13:50:04.006Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 09 Nov 2021 13:49:45 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=217","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-09T13:50:04.009Z] > refreshing access token with scopes: []
+[debug] [2021-11-09T13:50:04.009Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-11-09T13:50:04.526Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Tue, 09 Nov 2021 13:50:02 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-09T13:50:04.603Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/doctors-portal-a186b [none]
+[debug] [2021-11-09T13:50:34.620Z] Timeout reached making request to https://firebase.googleapis.com/v1beta1/projects/doctors-portal-a186b
+[debug] [2021-11-09T13:50:35.422Z] FirebaseError: Timeout reached making request to https://firebase.googleapis.com/v1beta1/projects/doctors-portal-a186b
+    at Client.doRequest (C:\Users\ANTAR\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:211:23)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async Client.request (C:\Users\ANTAR\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:96:20)
+    at async Object.getFirebaseProject (C:\Users\ANTAR\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:290:21)
+    at async Object.getDefaultHostingSite (C:\Users\ANTAR\AppData\Roaming\npm\node_modules\firebase-tools\lib\getDefaultHostingSite.js:8:21)
+    at async requireHostingSite (C:\Users\ANTAR\AppData\Roaming\npm\node_modules\firebase-tools\lib\requireHostingSite.js:9:18)
+    at async Object.fn (C:\Users\ANTAR\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\deploy.js:73:9)
+    at async C:\Users\ANTAR\AppData\Roaming\npm\node_modules\firebase-tools\lib\command.js:188:17
+[error] 
+[error] Error: Failed to get Firebase project doctors-portal-a186b. Please make sure the project exists and your account has permission to access it.
